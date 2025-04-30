@@ -1,15 +1,49 @@
+import { Container } from "./components/Container";
+
+import { Logo } from "./components/Logo";
+
+import "./styles/theme.css";
+import "./styles/global.css";
+import { Menu } from "./components/Menu";
+import { CountDown } from "./components/CountDown";
+import { DefaultInput } from "./components/DefaultInput";
+import { Cycles } from "./components/Cycles";
+
 export function App() {
   return (
     <>
-      <h1>Ola mundo!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, id rem
-        cum praesentium velit quibusdam nemo assumenda distinctio aut tempora,
-        totam fugit voluptates sint earum quia corrupti eligendi placeat
-        impedit.
-      </p>
+      <Container>
+        <Logo />
+      </Container>
+      <Container>
+        <Menu />
+      </Container>
+      <Container>
+        <CountDown />
+      </Container>
+      <Container>
+        <form className="form" action="">
+          <div className="formRow">
+            <DefaultInput
+              labelText="task"
+              id="meuInput"
+              type="text"
+              placeholder="Digite Algo"
+              
+            />
+          </div>
+
+          <div className="formRow">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div className="formRow">
+            <Cycles/>
+          </div>
+          <div className="formRow">
+            <button>Enviar</button>
+          </div>
+        </form>
+      </Container>
     </>
   );
 }
-
-
